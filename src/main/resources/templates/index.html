@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторана</title>
+    <link rel="shortcut icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="setup()">
+    <header class="header_container">
+        <div class="logo_container">
+            <img src="assets/logo.png">
+        </div>
+
+        <nav class="navigation">
+            <div class="menu_button button"><a href="/page1">Меню</a></div>
+            <div class="report_button button"><a href="/reports">Отзывы</a></div>
+            <div class="about_button button"><a href="/about">О нас</a></div>
+        </nav>
+    </header>
+
+    <div class="favorite_container">
+        <div class="favorite_card">
+        </div>
+    </div>
+
+    <div class="middle_container">
+        <aside class="aside_container">
+            <div class="nav_container">
+                <a href="/page1">Пицца</a>
+                <a href="/page2">Суши</a>
+                <a href="/page3">Салаты</a>
+            </div>
+        </aside>
+        <div class="content_container">
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/first.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Сырная</div>
+                <div class="description">Моцарелла, сыры чеддер и пармезан, соус альфредо</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">349₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/peperoni.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Пепперони</div>
+                <div class="description">Пикантная пепперони, увеличенная порция моцареллы, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">399₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/karbonara.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Карбонара</div>
+                <div class="description">Бекон, сыры чеддер и пармезан, красный лук, соус альфредо, итальянские травы</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">449₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/margo.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Маргарита</div>
+                <div class="description">Моцареллы, томаты, итальянские травы, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">249₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/diablo.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Диабло</div>
+                <div class="description">Острая чоризо, халапеньо, митболы, томаты, сладкий перец, лук, моцарелла, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">449₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/mix.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Микс</div>
+                <div class="description">Бекон, митболы, maпепперони, моцарелла, томаты, сладкий перец, красный лук, чеснок, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">449₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/cheese_chiken.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Сырный цыпленок</div>
+                <div class="description">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">299₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/chiken.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Цыпленок</div>
+                <div class="description">Цыпленок, ветчина, соус ранч, моцарелла, томаты, чеснок</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">349₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/meat.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Мясная</div>
+                <div class="description">Цыпленок, ветчина, пикантная пепперони, острая чоризо, моцарелла, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">399₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/four_cheese.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Четыре сыра</div>
+                <div class="description">Сыр блю чиз, сыры чеддер и пармезан, моцарелла, соус альфредо</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">299₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/chiken_barbeku.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Цыпленок барбекю</div>
+                <div class="description">Цыпленок, бекон, соус барбекю, красный лук, моцарелла, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">349₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/pie.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Пицца-пирог</div>
+                <div class="description">Ананасы, брусника, сгущенное молоко</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">349₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/salmon.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Нежный лосось</div>
+                <div class="description">Лосось, томаты, соус песто, моцарелла, соус альфредо</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">549₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/vetchina.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Ветчина и сыр</div>
+                <div class="description">Ветчина, моцарелла, соус альфредо</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">249₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/gavai.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Гавайская</div>
+                <div class="description">Ветчина, ананасы, моцарелла, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">349₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/double_pep.jpeg" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Двойная пепперони</div>
+                <div class="description">Двойная порция пикантной пепперони, увеличенная порция моцареллы, томатный соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">449₽</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer_container">
+        <div class="author">Designed by Ryabikov Danila</div>
+        <div class="social_net_container">
+            <div class="insta"><a href="https://www.instagram.com/ryb_danil/"><img src="assets/insta.png" alt=""></a></div>
+            <div class="vk"><a href="https://vk.com/id505964334"><img src="assets/vk.png" alt=""></a></div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

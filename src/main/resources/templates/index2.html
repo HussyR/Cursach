@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="setup()">
+    <header class="header_container">
+        <div class="logo_container">
+            <img src="assets/logo.png">
+
+        </div>
+
+        <nav class="navigation">
+            <div class="menu_button button"><a href="/page1">Меню</a></div>
+            <div class="report_button button"><a href="/reports">Отзывы</a></div>
+            <div class="about_button button"><a href="/about">О нас</a></div>
+        </nav>
+    </header>
+
+    <div class="favorite_container">
+        <div class="favorite_card">
+        </div>
+    </div>
+
+    <div class="middle_container">
+        <aside class="aside_container">
+            <div class="nav_container">
+                <a href="/page1">Пицца</a>
+                <a href="/page2">Суши</a>
+                <a href="/page3">Салаты</a>
+            </div>
+        </aside>
+        <div class="content_container">
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/tamago.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Тамаго</div>
+                <div class="description">Японский омлет тамаго, унаги соус, кунжут, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">50₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/avokado.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Авокадо</div>
+                <div class="description">Авокадо, унаги соус, кунжут, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">75₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/s9ke.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Сяке</div>
+                <div class="description">Лосось, рис</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">95₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/Unagi-sushi.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Унаги</div>
+                <div class="description">Копченый угорь, унаги соус, кунжут, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">85₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/ebi.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Эби</div>
+                <div class="description">Тигровая креветка, рис</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">95₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/kani.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Кани Спайси</div>
+                <div class="description">Канико смесь, огурец, спайси соус, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">95₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/kalifa.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Калифа Лайт</div>
+                <div class="description">Канико смесь, огурец, кунжут, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">189₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/nejniy_krab.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Нежныц краб</div>
+                <div class="description">Канико семсь, сыр Cremette, масаго, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">119₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/mister.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Мистер Крабс</div>
+                <div class="description">Канико смесь, кукуруза, омлет тамаго, огурец, авокадо соус, сыр Cremette, масаго, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">99₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/Chibu.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Чибу</div>
+                <div class="description">Запеченный лосось бури в терияки соусе, сыр чеддер, сыр Cremette, огурец, терияки соус, кунжут</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">240₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/Masakrem_.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Масакрем</div>
+                <div class="description">Масаго, сыр Cremette, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">160₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/ebi-KHot_.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Эби-Хот</div>
+                <div class="description">Тигровая креветка, курица гриль, тамаго, огурец, крем соус, масаго, васаби соус, унаги соус, орех кешью</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">289₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/bito-Panchan.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Бито</div>
+                <div class="description">Лосось, сыр Cremette, маринованная свекла, рис, нори</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">297₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/tokio-Kye_.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Токио</div>
+                <div class="description">Лосось, копченый угорь, Канико смесь, сыр Cremette, салат айсберг, тобико, зеленый лук, кунжут, унаги соус, спайси соус</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">299₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/oyshi_.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Ойши</div>
+                <div class="description">Копченый угорь, огурец, сыр Cremette, соус спайси лайт, унаги соус, кунжут</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">299₽</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="food_card">
+                <div class="image_container">
+                    <img src="assets/katana_.png" alt="" style="height: 200px; width: 200px;">
+                </div>
+                <div class="text_container">
+                    <div class="title">Катана</div>вщ
+                <div class="description">Лосось опаленный открытым огнем, канико смесь, масаго, авокадо, майонез</div>
+                </div>
+                <div class="lower_container">
+                    <div class="price_container">
+                        <div class="price">345₽</div>
+                    </div>
+                    <div class="buy_container">
+                        <div class="buy">Выбрать</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <footer class="footer_container">
+        <div class="author">Designed by Ryabikov Danila</div>
+        <div class="social_net_container">
+            <div class="insta"><a href="https://www.instagram.com/ryb_danil/"><img src="assets/insta.png" alt=""></a></div>
+            <div class="vk"><a href="https://vk.com/id505964334"><img src="assets/vk.png" alt=""></a></div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
