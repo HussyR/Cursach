@@ -1,0 +1,145 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Login
+        </div>
+        <div th:if="${param.error}">
+            <div class="alert alert-danger"></div>
+        </div>
+        <form th:action="@{/login}" method="post">
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" name="username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" name="password" type="password" required class="validate" autocomplete="off">
+            </div>
+            <input type="submit" value="Log In" />
+        </form>
+        <div th:if="${param.success}">
+            <div>Вы успешно авторизировались!</div>
+        </div>
+        <div class="register">
+            Don't have an account yet?
+            <a href="/registration"><button id="register-link">Register here</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Вход</title>-->
+
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <link rel="stylesheet" href="registration.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash;Navbar&ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark">-->
+<!--    <div class="container">-->
+<!--        <a class="navbar-brand" href="#" th:href="@{/}">GRIGA Barber</a>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--            <ul class="navbar-nav ms-auto">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/" th:href="@{/}">Главная</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/" th:href="@{/}">Услуги</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/" th:href="@{/}">Команда</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/" th:href="@{/}">Контакты</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+<!--&lt;!&ndash;Navbar&ndash;&gt;-->
+
+<!--&lt;!&ndash;Form&ndash;&gt;-->
+<!--<div class="wr">-->
+<!--    <div class="wrapper">-->
+<!--        &lt;!&ndash; error message &ndash;&gt;-->
+<!--        <div th:if="${param.error}">-->
+<!--            <div class="alert alert-danger">Неверный email или пароль.</div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; logout message &ndash;&gt;-->
+<!--        <div th:if="${param.logout}">-->
+<!--            <div class="alert alert-info">Вы вышли из аккаунта!</div>-->
+<!--        </div>-->
+<!--        <form th:action="@{/login}" method="post">-->
+<!--            <header style="padding-bottom: 30px; margin-top: 10px">Вход</header>-->
+<!--            <div class="heading-line" style="margin-bottom: 30px; margin-top: -3px"></div>-->
+
+<!--            <div class="field email">-->
+<!--                <div class="input-area">-->
+<!--                    <input type="text" id ="username" name = "username" placeholder="Email Address" autofocus="autofocus">-->
+<!--                    <i class="icon fas fa-envelope"></i>-->
+<!--                    <i class="error error-icon fas fa-exclamation-circle"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="field password">-->
+<!--                <div class="input-area">-->
+<!--                    <input type="password" id="password" name = "password" placeholder="Password" autofocus="autofocus">-->
+<!--                    <i class="icon fas fa-lock"></i>-->
+<!--                    <i class="error error-icon fas fa-exclamation-circle"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <button type="submit" name="login-submit" id="login-submit"-->
+<!--                        class="form-control btn btn-primary" style="background: #9e8a78; border-color: #9e8a78;">Войти</button>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <span class="spann">Нет аккаунта? <a style="color: #9e8a78" href="/" th:href="@{/registration}">Зарегистрируйтесь.</a></span>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;Form&ndash;&gt;-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+

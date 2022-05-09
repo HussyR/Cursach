@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #F2F2F2;
+}
+
+#container-login {
+    background-color: thistle;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 340px;
+    height: 445px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#container-register {
+    background-color: thistle;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 340px;
+    height: 480px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#title {
+    position: relative;
+    background-color: purple;
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 0.35em;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lock {
+	position: relative;
+	top: 2px;
+}
+
+.input {
+    margin: auto;
+    width: 240px;
+    border-radius: 4px;
+    background-color: purple;
+    padding: 8px 0px;
+    margin-top: 15px;
+}
+
+.input-addon {
+    float: left;
+    background-color: purple;
+    padding: 4px 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+input[type=text] {
+    color: #949494;
+    margin: 0;
+    border: 1px solid purple;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    border: 1px solid purple;
+}
+
+input[type=password] {
+    color: #949494;
+    margin: 0;
+    border: 1px solid purple;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=password]:focus {
+    border: 1px solid purple;
+}
+
+input[type=email] {
+    color: #949494;
+    margin: 0;
+    background-color: white;
+    border: 1px solid purple;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=email]:focus {
+    border: 1px solid white;
+}
+
+.forgot-password {
+    position: relative;
+    bottom: 0%;
+}
+
+.forgot-password a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.forgot-password a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: white;
+}
+
+.privacy {
+    margin-top: 5px;
+    position: relative;
+    font-size: 12px;
+    bottom: 0%;
+}
+
+.privacy a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.privacy a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    color: white;
+    transition: color 1s;
+}
+
+*:focus {
+    outline: none;
+}
+
+.remember-me {
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    padding: 6px 25px;
+    margin: 10px 0;
+    background: purple;
+    color: white;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register {
+    margin: auto;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: 40px;
+    width: 85%;
+    border-top: 1px solid #C1C3C6;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#register-link {
+    margin-top: 10px;
+    padding: 6px 25px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}

@@ -1,10 +1,27 @@
 package com.example.cursach.Controllers;
 
+import com.example.cursach.Models.User;
+import com.example.cursach.Repositories.UserRepository;
+import com.example.cursach.Service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @ModelAttribute("user")
+    public User user() {
+        return new User();
+    }
 
     @GetMapping("/page1")
     public String getMenuPage1() {
@@ -24,6 +41,16 @@ public class MainController {
     public String getAbout() {
         return "index5";
     }
+    @GetMapping("/login")
+    public String getLogin() {
+        return "login";
+    }
+    @GetMapping("/registration")
+    public String getRegistration() { return "register"; }
 
-
+    @PostMapping("/registration")
+    public String registerUserAccount(@ModelAttribute("user") User user) {
+        userService.save(user);
+        return "redirect:/registration?success";
+    }
 }
