@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +20,13 @@
             <div class="report_button button"><a href="/reports">Отзывы</a></div>
             <div class="about_button button"><a href="/about">О нас</a></div>
         </nav>
+
+        <nav class="navigation">
+            <p sec:authorize="!isAuthenticated()" class="login_button button"><a href="/login">Вход</a></p>
+            <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/userOrders">Мои бронирования</a></p>
+            <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/logout">Выйти</a></p>
+        </nav>
+
     </header>
 
     <div class="favorite_container">

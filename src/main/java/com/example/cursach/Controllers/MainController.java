@@ -1,13 +1,19 @@
 package com.example.cursach.Controllers;
 
+import com.example.cursach.Models.TableOrder;
 import com.example.cursach.Models.User;
+import com.example.cursach.Repositories.TableOrderRepository;
 import com.example.cursach.Repositories.UserRepository;
 import com.example.cursach.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -21,6 +27,11 @@ public class MainController {
     @ModelAttribute("user")
     public User user() {
         return new User();
+    }
+
+    @ModelAttribute("order")
+    public TableOrder order() {
+        return new TableOrder();
     }
 
     @GetMapping("/page1")
@@ -47,10 +58,41 @@ public class MainController {
     }
     @GetMapping("/registration")
     public String getRegistration() { return "register"; }
+    @GetMapping("/order")
+    public String getRecords() { return "record"; }
 
     @PostMapping("/registration")
     public String registerUserAccount(@ModelAttribute("user") User user) {
         userService.save(user);
         return "redirect:/registration?success";
     }
+    @PostMapping("/order")
+    public String createATask(@ModelAttribute("order") TableOrder tableOrder) {
+
+        System.out.println(tableOrder.toString());
+        var authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByEmail(authentication.getName());
+
+        tableOrder.setUser(user);
+        tableOrderRepository.save(tableOrder);
+
+
+        return "redirect:/userOrders";
+    }
+
+    @Autowired
+    private TableOrderRepository tableOrderRepository;
+
+    @GetMapping("/userOrders")
+    public String userOrders(Model model) {
+        var authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+        var user = userRepository.findByEmail(email);
+        var list = tableOrderRepository.findAllByUser(user);
+
+        model.addAttribute("orders", list);
+
+        return "allRecords";
+    }
+
 }

@@ -20,9 +20,11 @@
             <div class="about_button button"><a href="/about">О нас</a></div>
         </nav>
 
-        <p sec:authorize="!isAuthenticated()" class="login_button"><a href="/login">Вход</a></p>
-        <p sec:authorize="isAuthenticated()" class="login_button" >Мои бронирования</p>
-        <p sec:authorize="isAuthenticated()" class="login_button" ><a href="/logout">Выйти</a></p>
+        <nav class="navigation">
+            <p sec:authorize="!isAuthenticated()" class="login_button button"><a href="/login">Вход</a></p>
+            <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/userOrders">Мои бронирования</a></p>
+            <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/logout">Выйти</a></p>
+        </nav>
 
     </header>
 

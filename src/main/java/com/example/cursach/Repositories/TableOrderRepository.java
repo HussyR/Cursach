@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface TableOrderRepository extends JpaRepository<TableOrder, Long> {
-    List<TableOrder> findByUser(User user);
+    List<TableOrder> findAllByUser(User user);
 }

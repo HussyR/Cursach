@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Забронировать столик</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container-order">
+    <div id="title">
+        <i class="material-icons lock">lock</i>Забронировать стол
+    </div>
+    <form th:action="@{/order}" method="post" th:object="${order}">
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">alarm</i>
+            </div>
+            <input id="time" placeholder="00:00" name="time" type="time" th:field="*{time}" required class="validate" autocomplete="off">
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            <input id="number" placeholder="Количество человек" name="number" type="number" th:field="*{numberOfPersons}" required class="validate" autocomplete="off">
+        </div>
+        <input type="submit" value="Забронировать столик" />
+    </form>
+    <div th:if="${param.success}">
+        <div style="margin-bottom: 10px">Вы успешно забронировали столик</div>
+    </div>
+
+    <div><a href="/page1" style="color: white; background-color: purple; padding: 5px; border-radius: 3px; margin: 10px;">Закрыть</a></div>
+
+</div>
+</body>
+</html>
