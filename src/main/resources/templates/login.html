@@ -16,7 +16,7 @@
 <body>
     <div id="container-login">
         <div id="title">
-            <i class="material-icons lock">lock</i> Login
+            <i class="material-icons lock">lock</i> Войти
         </div>
         <div th:if="${param.error}">
             <div class="alert alert-danger"></div>
@@ -26,7 +26,7 @@
                 <div class="input-addon">
                     <i class="material-icons">face</i>
                 </div>
-                <input id="username" placeholder="Username" name="username" type="text" required class="validate" autocomplete="off">
+                <input id="username" placeholder="Имя" name="username" type="text" required class="validate" autocomplete="off">
             </div>
 
             <div class="clearfix"></div>
@@ -35,16 +35,16 @@
                 <div class="input-addon">
                     <i class="material-icons">vpn_key</i>
                 </div>
-                <input id="password" placeholder="Password" name="password" type="password" required class="validate" autocomplete="off">
+                <input id="password" placeholder="Пароль" name="password" type="password" required class="validate" autocomplete="off">
             </div>
-            <input type="submit" value="Log In" />
+            <input type="submit" value="Войти" />
         </form>
         <div th:if="${param.success}">
             <div>Вы успешно авторизировались!</div>
         </div>
         <div class="register">
-            Don't have an account yet?
-            <a href="/registration"><button id="register-link">Register here</button></a>
+            Нету аккаунта?
+            <a href="/registration"><button id="register-link">Зарегистрироваться</button></a>
         </div>
     </div>
 </body>
