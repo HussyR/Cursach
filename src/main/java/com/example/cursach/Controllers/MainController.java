@@ -1,5 +1,6 @@
 package com.example.cursach.Controllers;
 
+import com.example.cursach.DTO.UserRegistrationDTO;
 import com.example.cursach.Models.TableOrder;
 import com.example.cursach.Models.User;
 import com.example.cursach.Repositories.TableOrderRepository;
@@ -23,11 +24,6 @@ public class MainController {
 
     @Autowired
     private UserRepository userRepository;
-
-    @ModelAttribute("user")
-    public User user() {
-        return new User();
-    }
 
     @ModelAttribute("order")
     public TableOrder order() {
@@ -56,13 +52,18 @@ public class MainController {
     public String getLogin() {
         return "login";
     }
+
     @GetMapping("/registration")
-    public String getRegistration() { return "register"; }
+    public String getRegistration(Model model) {
+        UserRegistrationDTO user = new UserRegistrationDTO();
+        model.addAttribute("user", user);
+        return "register";
+    }
     @GetMapping("/order")
     public String getRecords() { return "record"; }
 
     @PostMapping("/registration")
-    public String registerUserAccount(@ModelAttribute("user") User user) {
+    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDTO user) {
         userService.save(user);
         return "redirect:/registration?success";
     }
@@ -93,6 +94,13 @@ public class MainController {
         model.addAttribute("orders", list);
 
         return "allRecords";
+    }
+
+    @GetMapping("/allOrders")
+    public String adminOrders(Model model) {
+        var list = tableOrderRepository.findAll();
+        model.addAttribute("orders", list);
+        return "admin";
     }
 
 }

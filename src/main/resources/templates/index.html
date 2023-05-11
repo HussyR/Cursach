@@ -22,7 +22,8 @@
 
         <nav class="navigation">
             <p sec:authorize="!isAuthenticated()" class="login_button button"><a href="/login">Вход</a></p>
-            <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/userOrders">Мои бронирования</a></p>
+            <p sec:authorize="hasAuthority('ROLE_USER')" class="login_button button" ><a href="/userOrders">Мои бронирования</a></p>
+            <p sec:authorize="hasAuthority('ROLE_ADMIN')" class="login_button button" ><a href="/allOrders">Все бронирования</a></p>
             <p sec:authorize="isAuthenticated()" class="login_button button" ><a href="/logout">Выйти</a></p>
         </nav>
 
